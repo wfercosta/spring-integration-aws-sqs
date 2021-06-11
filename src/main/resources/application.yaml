@@ -1,0 +1,16 @@
+
+aws:
+  local:
+    endpoint: http://localhost:4566
+
+cloud:
+  aws:
+    static:
+      region: sa-east1
+    credentials:
+      access-key: local
+      secret-key: local
+
+application:
+  aws:
+    queue: recebimento-bacen
