@@ -1,0 +1,1 @@
+# spring-integration-aws-sqs
