@@ -38,11 +38,6 @@ public class SampleSqsFlow {
 	}
 
 	@Bean
-	public QueueChannel queueChannel() {
-		return MessageChannels.queue().get();
-	}
-
-	@Bean
 	public IntegrationFlow success() {
 		return f -> f
 				.log(LoggingHandler.Level.INFO, message -> "Success Channel --> " + message)
@@ -58,9 +53,7 @@ public class SampleSqsFlow {
 	@Bean
 	public IntegrationFlow failure() {
 		return f -> f
-				.log(LoggingHandler.Level.INFO, message -> "Failure Channel --> " + message)
-				.wireTap( c -> c.channel(queueChannel()))
-				.log(LoggingHandler.Level.INFO, message -> "closed Channel --> " + message);
+				.log(LoggingHandler.Level.INFO, message -> "Failure Channel --> " + message);
 	}
 
 }
