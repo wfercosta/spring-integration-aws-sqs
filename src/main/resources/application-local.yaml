@@ -1,0 +1,15 @@
+
+spring:
+  config:
+    aws-configuration: true
+
+
+cloud:
+  aws:
+    local-stack:
+      endpoint: http://localhost:4566
+      sqs-queues:
+        - recebimento-bacen
+    credentials:
+      access-key: local
+      secret-key: local

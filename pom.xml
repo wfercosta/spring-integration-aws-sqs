@@ -17,6 +17,14 @@
 		<java.version>11</java.version>
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>dynamodb-local-oregon</id>
+			<name>DynamoDB Local Release Repository</name>
+			<url>https://s3-us-west-2.amazonaws.com/dynamodb-local/release</url>
+		</repository>
+	</repositories>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -34,10 +42,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-integration</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.integration</groupId>
 			<artifactId>spring-integration-http</artifactId>
@@ -48,6 +58,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.integration</groupId>
 			<artifactId>spring-integration-test</artifactId>
@@ -59,11 +70,11 @@
 			<artifactId>spring-cloud-starter-aws-messaging</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.integration</groupId>
-			<artifactId>spring-integration-aws</artifactId>
-			<version>2.5.1</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.integration</groupId>-->
+<!--			<artifactId>spring-integration-aws</artifactId>-->
+<!--			<version>2.5.1</version>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -76,6 +87,21 @@
 			<version>2.26.2</version>
 			<scope>test</scope>
 		</dependency>
+
+
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-dynamodb</artifactId>
+			<version>1.12.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>DynamoDBLocal</artifactId>
+			<version>1.15.0</version>
+			<scope>test</scope>
+		</dependency>
+
 
 	</dependencies>
 

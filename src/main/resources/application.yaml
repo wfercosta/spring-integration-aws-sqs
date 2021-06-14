@@ -1,15 +1,16 @@
 
-aws:
-  local:
-    endpoint: http://localhost:4566
+spring:
+  profiles:
+    active: local
+    group:
+      local: aws-sqs-common, aws-sqs-local
+      aws: aws-sqs-common
+
 
 cloud:
   aws:
     static:
       region: sa-east1
-    credentials:
-      access-key: local
-      secret-key: local
 
 application:
   aws:
