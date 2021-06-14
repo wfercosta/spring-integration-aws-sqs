@@ -26,6 +26,7 @@ public class AmazonConfigurationProperties {
 	public static class LocalStack {
 		private URL endpoint;
 		private List<String> sqsQueues = new ArrayList<>();
+		private List<String> dynamodbTables = new ArrayList<>();
 	}
 
 	@Data

@@ -10,6 +10,8 @@ cloud:
       endpoint: http://localhost:4566
       sqs-queues:
         - recebimento-bacen
+      dynamodb-tables:
+        - com.example.si.SampleTable
     credentials:
       access-key: local
       secret-key: local
